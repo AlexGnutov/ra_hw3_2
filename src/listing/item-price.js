@@ -11,7 +11,7 @@ function ItemPrice(props) {
             priceTitle = '$' + adoptedPrice;
             break;
         case 'EUR':
-            priceTitle = [<span>&euro;</span>, '' + adoptedPrice];
+            priceTitle = [<span key={1}>&euro;</span>, '' + adoptedPrice];
             break;
         case 'GBP':
             priceTitle = adoptedPrice + ' GBP';
@@ -27,7 +27,7 @@ function ItemPrice(props) {
 
 ItemPrice.propTypes = {
     currencyCode: PropTypes.string,
-    price: PropTypes.number.isRequired,
+    price: PropTypes.string.isRequired,
 }
 
 export default ItemPrice;

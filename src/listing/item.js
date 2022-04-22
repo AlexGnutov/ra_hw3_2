@@ -8,14 +8,14 @@ function Item(props) {
     const { item } = props;
 
     return (
-        <div key={item.listing_id} className={'item'}>
-            <ItemImage imageData={item.MainImage} link={item.url} alt={item.title}/>
+        <>
+            <ItemImage imageData={item['MainImage']} link={item.url} alt={item.title}/>
             <div className={'item-details'}>
                 <ItemTitle title={item.title}/>
-                <ItemPrice price={item.price} currencyCode={item.currency_code}/>
+                <ItemPrice price={item.price} currencyCode={item['currency_code']}/>
                 <ItemQuantity quantity={item.quantity}/>
             </div>
-        </div>
+        </>
     )
 }
 
